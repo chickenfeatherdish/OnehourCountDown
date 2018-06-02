@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>一小时钟在线倒计时</title>
+	<style>
+		ul,
+		menu,
+		dir {
+			display: block;
+			list-style-type: disc;
+			-webkit-margin-before: 0;
+			-webkit-margin-after: 0;
+			-webkit-margin-start: 0px;
+			-webkit-margin-end: 0px;
+			-webkit-padding-start: 0;
+		}
+
+		p {
+			display: block;
+			-webkit-margin-before: 0;
+			-webkit-margin-after: 0;
+			-webkit-margin-start: 0px;
+			-webkit-margin-end: 0px;
+		}
+
+		h2 {
+			display: block;
+			font-size: 1.5em;
+			-webkit-margin-before: 0;
+			-webkit-margin-after: 0;
+			-webkit-margin-start: 0px;
+			-webkit-margin-end: 0px;
+			font-weight: bold;
+		}
+
+		.con {
+			margin-top: 50px;
+		}
+
+		li {
+			color: #afabab;
+			list-style: none;
+			font-size: 14px;
+			line-height: 25px;
+		}
+
+		.foot,
+		.foot a {
+			color: #ccc;
+			font-size: 12px;
+			margin-top: 200px;
+		}
+	</style>
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+	<div id="app">
+		<audio src="./cloak.mp3" ref="cloak"></audio>
+		<div class='wrapper'>
+			<div class='time-part-wrapper'>
+				<div class='time-part minutes tens'>
+					<div class='digit-wrapper'>
+						<span class='digit'>0</span>
+						<span class='digit'>5</span>
+						<span class='digit'>4</span>
+						<span class='digit'>3</span>
+						<span class='digit'>2</span>
+						<span class='digit'>1</span>
+						<span class='digit'>0</span>
+					</div>
+				</div>
+				<div class='time-part minutes ones'>
+					<div class='digit-wrapper'>
+						<span class='digit'>0</span>
+						<span class='digit'>9</span>
+						<span class='digit'>8</span>
+						<span class='digit'>7</span>
+						<span class='digit'>6</span>
+						<span class='digit'>5</span>
+						<span class='digit'>4</span>
+						<span class='digit'>3</span>
+						<span class='digit'>2</span>
+						<span class='digit'>1</span>
+						<span class='digit'>0</span>
+					</div>
+				</div>
+			</div>
+			<div class='time-part-wrapper'>
+				<div class='time-part seconds tens'>
+					<div class='digit-wrapper'>
+						<span class='digit'>0</span>
+						<span class='digit'>5</span>
+						<span class='digit'>4</span>
+						<span class='digit'>3</span>
+						<span class='digit'>2</span>
+						<span class='digit'>1</span>
+						<span class='digit'>0</span>
+					</div>
+				</div>
+				<div class='time-part seconds ones'>
+					<div class='digit-wrapper'>
+						<span class='digit'>0</span>
+						<span class='digit'>9</span>
+						<span class='digit'>8</span>
+						<span class='digit'>7</span>
+						<span class='digit'>6</span>
+						<span class='digit'>5</span>
+						<span class='digit'>4</span>
+						<span class='digit'>3</span>
+						<span class='digit'>2</span>
+						<span class='digit'>1</span>
+						<span class='digit'>0</span>
+					</div>
+				</div>
+			</div>
+			<div class='time-part-wrapper'>
+				<div class='time-part hundredths tens'>
+					<div class='digit-wrapper'>
+						<span class='digit'>0</span>
+						<span class='digit'>9</span>
+						<span class='digit'>8</span>
+						<span class='digit'>7</span>
+						<span class='digit'>6</span>
+						<span class='digit'>5</span>
+						<span class='digit'>4</span>
+						<span class='digit'>3</span>
+						<span class='digit'>2</span>
+						<span class='digit'>1</span>
+						<span class='digit'>0</span>
+					</div>
+				</div>
+				<div class='time-part hundredths ones'>
+					<div class='digit-wrapper'>
+						<span class='digit'>0</span>
+						<span class='digit'>9</span>
+						<span class='digit'>8</span>
+						<span class='digit'>7</span>
+						<span class='digit'>6</span>
+						<span class='digit'>5</span>
+						<span class='digit'>4</span>
+						<span class='digit'>3</span>
+						<span class='digit'>2</span>
+						<span class='digit'>1</span>
+						<span class='digit'>0</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='con'>
+			<ul>
+				<li>
+					一小时很短
+				</li>
+				<li>表盘上时针移动的短短一段</li>
+				<li>一小时很长</li>
+				<li>3600秒里可以做很多事情</li>
+				<li>一小时</li>
+				<li>可以读一本书</li>
+				<li>可以喝一杯咖啡</li>
+				<li>可以上一节瑜伽课</li>
+				<li>一小时</li>
+				<li>你都做了哪些事情呢</li>
+				<li>一小时后我会给你提醒</li>
+				<li>赶紧行动起来吧</li>
+			</ul>
+		</div>
+		<p class="foot">一小时倒计时@2018 | 使用
+			<a href="https://nebulas.io/cn/" target="_blank">星云链 驱动</a> |
+			<a href="help.html" target="_blank">帮助中心</a> |
+			<a href="https://incentive.nebulas.io/cn/signup.html?invite=bFZxb" target="_blank">提交DAPP获得 100NAS 币</a>
+		</p>
+	</div>
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script type="text/javascript" src="js/nebulas.js"></script>
+	<script type="text/javascript" src="js/nebPay.js"></script>
+	<script type="text/javascript" src="js/config.js"></script>
+	<script type="text/javascript">
+		var time = null;
+		var app = new Vue({
+			el: '#app',
+			data: {
+				switch: false,
+				time: '3600'
+			},
+			mounted() {
+				this.submit();
+			},
+			methods: {
+				submit() {
+					if (time) {
+						return
+					}
+					time = setInterval(() => {
+						if (this.time > 0) {
+							this.time--
+						} else {
+							this.$refs.cloak.play()
+							clearInterval(time)
+							time = null;
+						}
+					}, 1000)
+				}
+			}
+		})
+		document.addEventListener('visibilitychange', function () {
+			if (document.visibilityState == 'hidden') {
+				document.title = '不要偷懒哦小可爱'
+			} else {
+				document.title = '一小时钟在线倒计时'
+			}
+		});
+	</script>
+</body>
+
+</html>
